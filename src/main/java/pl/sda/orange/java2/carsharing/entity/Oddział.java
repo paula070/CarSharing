@@ -18,7 +18,7 @@ public class Oddział {
 
     private String miasto;
 
-    @OneToMany
+
     private List<Pracownik> pracownicy;
 
     @OneToMany
