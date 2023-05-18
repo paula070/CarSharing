@@ -14,4 +14,3 @@ package pl.sda.orange.java2.carsharing.entity;
 
         // konstruktor, gettery, settery, etc.
     }
-}
