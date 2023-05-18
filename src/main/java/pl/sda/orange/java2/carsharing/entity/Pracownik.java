@@ -1,16 +1,19 @@
 package pl.sda.orange.java2.carsharing.entity;
 
-    @Entity
-    public class Pracownik {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+import javax.persistence.*;
 
-        private String imie;
-        private String nazwisko;
+@Entity
+public class Pracownik {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        @ManyToOne
-        private Oddział oddzial;
+    private String imie;
+    private String nazwisko;
 
-        // konstruktor, gettery, settery, etc.
-    }
+    @ManyToOne
+    private Oddział oddzial;
+
+    // konstruktor, gettery, settery, etc.
+}
+
