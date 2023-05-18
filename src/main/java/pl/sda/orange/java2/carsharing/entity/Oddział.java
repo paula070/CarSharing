@@ -22,7 +22,7 @@ public class Oddział {
     private List<Pracownik> pracownicy;
 
     @OneToMany
-    private List<Car> dostepneAuta;
+    private List<Samochód> dostepneAuta;
 
     public Oddział() {
         pracownicy = new ArrayList<>();
