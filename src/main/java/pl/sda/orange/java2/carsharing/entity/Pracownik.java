@@ -1,6 +1,8 @@
 package pl.sda.orange.java2.carsharing.entity;
 
-    @Entity
+import javax.persistence.*;
+
+@Entity
     public class Pracownik {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,4 +16,4 @@ package pl.sda.orange.java2.carsharing.entity;
 
         // konstruktor, gettery, settery, etc.
     }
-}
+
