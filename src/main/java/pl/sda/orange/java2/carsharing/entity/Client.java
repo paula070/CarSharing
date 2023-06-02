@@ -3,7 +3,7 @@ package pl.sda.orange.java2.carsharing.entity;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import pl.sda.orange.java2.carsharing.api.AuthDataDto;
 
 import javax.persistence.*;
 
@@ -26,12 +26,28 @@ public class Client {
 
     private String password;
 
+    private String username;
+
+
     public Client(Long id, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.username = username; // dodac
         this.password = password;
+    }
+    public Client withPassword(String newPassword) {
+        return Client
+                .builder()
+                .username(username)
+                .password(newPassword)
+                .build();
+    }
+
+    public AuthDataDto toAuthDataDto(){
+        return new AuthDataDto(username, firstName, lastName );
+
     }
 
     public Client() {
@@ -52,6 +68,7 @@ public class Client {
     public String getEmail() {
         return email;
     }
+
 
     public String getPassword() {
         return password;
