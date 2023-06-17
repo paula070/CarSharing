@@ -2,8 +2,6 @@ package pl.sda.orange.java2.carsharing.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pl.sda.orange.java2.carsharing.entity.Client;
-import pl.sda.orange.java2.carsharing.repository.ClientRepository;
 
 import java.util.List;
 
